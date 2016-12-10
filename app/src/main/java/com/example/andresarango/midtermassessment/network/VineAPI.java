@@ -1,6 +1,5 @@
 package com.example.andresarango.midtermassessment.network;
 
-import okhttp3.Response;
 import okhttp3.ResponseBody;
 import retrofit2.Call;
 import retrofit2.Retrofit;
@@ -15,14 +14,14 @@ public class VineAPI {
     private String VINE_BASE_URL = "https://vine.co/";
     private VineService mVineService;
 
-    public static VineAPI getInstance(){
-        if(instance == null){
+    public static VineAPI getInstance() {
+        if (instance == null) {
             instance = new VineAPI();
         }
         return instance;
     }
 
-    private VineAPI(){
+    private VineAPI() {
         mVineService = new Retrofit.Builder()
                 .baseUrl(VINE_BASE_URL)
                 .addConverterFactory(GsonConverterFactory.create())
@@ -30,7 +29,7 @@ public class VineAPI {
                 .create(VineService.class);
     }
 
-    public Call<ResponseBody> getCall(){
+    public Call<ResponseBody> getCall() {
         return mVineService.getVineJSON();
     }
 }

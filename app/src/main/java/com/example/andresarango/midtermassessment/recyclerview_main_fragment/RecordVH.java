@@ -24,9 +24,9 @@ public class RecordVH extends RecyclerView.ViewHolder {
     }
 
     public void bind(com.example.andresarango.midtermassessment.modello.Record record) {
-        if(record.getProfileBackground() != null){
+        if (record.getProfileBackground() != null) {
             Log.d("YEEEEERRR", record.getProfileBackground().substring(2));
-            int backgroundColor = Color.parseColor("#"+record.getProfileBackground().substring(2));
+            int backgroundColor = Color.parseColor("#" + record.getProfileBackground().substring(2));
             itemView.setBackgroundColor(backgroundColor);
         }
         String userName = record.getUsername();

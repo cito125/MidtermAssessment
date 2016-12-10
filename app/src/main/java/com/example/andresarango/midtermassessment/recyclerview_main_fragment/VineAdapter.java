@@ -20,7 +20,7 @@ public class VineAdapter extends RecyclerView.Adapter<RecordVH> {
     @Override
     public RecordVH onCreateViewHolder(ViewGroup parent, int viewType) {
         return new RecordVH(LayoutInflater.from(parent.getContext())
-                .inflate(R.layout.record_viewholder,parent,false));
+                .inflate(R.layout.record_viewholder, parent, false));
     }
 
     @Override
