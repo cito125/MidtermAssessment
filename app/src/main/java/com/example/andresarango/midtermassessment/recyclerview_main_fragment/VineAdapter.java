@@ -5,7 +5,6 @@ import android.view.LayoutInflater;
 import android.view.ViewGroup;
 
 import com.example.andresarango.midtermassessment.R;
-import com.example.andresarango.midtermassessment.model.Record;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -15,7 +14,7 @@ import java.util.List;
  */
 public class VineAdapter extends RecyclerView.Adapter<RecordVH> {
 
-    List<Record> mRecordList = new ArrayList<>();
+    List<com.example.andresarango.midtermassessment.modello.Record> mRecordList = new ArrayList<>();
 
 
     @Override
@@ -29,7 +28,7 @@ public class VineAdapter extends RecyclerView.Adapter<RecordVH> {
         holder.bind(mRecordList.get(position));
     }
 
-    public void updateRecordList(List<Record> recordList) {
+    public void updateRecordList(List<com.example.andresarango.midtermassessment.modello.Record> recordList) {
         mRecordList.clear();
         mRecordList.addAll(recordList);
         notifyDataSetChanged();
