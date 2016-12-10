@@ -8,6 +8,17 @@ package com.example.andresarango.midtermassessment.modello;
 public class Record {
     int liked;
 
+    public String getProfileBackground() {
+        return profileBackground;
+    }
+
+    public String getUsername() {
+        return username;
+    }
+
+    String profileBackground;
+    String username;
+
     public Repost getRepost() {
         return repost;
     }
